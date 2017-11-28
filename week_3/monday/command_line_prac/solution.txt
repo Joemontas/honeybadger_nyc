@@ -1,0 +1,16 @@
+##
+1-  mkdir my-Favorite-things
+2-  cd my-Favorite-things
+3-  mkdir books
+4-  cd books
+5-  mkdir Paulo_Coelho
+6-  cd Paulo_Coelho
+7-  touch La Quinta Montana.txt El Alquimista.txt
+8-  cd ../ ..
+9-  code books
+10- Pull up each .txt document on the left and add brief description of the book, then save
+11- mkdir movies
+12- cd movies
+13- mkdir Denzel_Washintgon
+
+
