@@ -62,15 +62,38 @@ function makeMiddleEarth() {
 };
 
 function makeHobbits() {
-  console.log('Make hobbits');
-  // display an unordered list of hobbits in the shire
-  // give each hobbit a class of "hobbit"
+  console.log('Make Hobbits');
+  // save a variable with The Shire
+  const theShire = document.getElementById('The Shire');
+  // console.log("TheShire", TheShire);
+
   // list the hobbits alphabetically.  Maybe use the .sort() method.
+  hobbits.sort()
+  //console.log(hobbits)
+
+  // display an unordered list of hobbits in the shire
+  let hobbitsList = document.createElement('ul');
+
+  for(let hobbit of hobbits){
+    console.log("hobbit =", hobbit)
+    // create a li for each hobbit and giv e it a class of 'hobbit'
+  let hobbitListItem = document.createElement('li');
+  hobbitListItem.textContent = hobbit;
+  hobbitListItem.classList.add('hobbit');
+  hobbitsList.appendChild(hobbitListItem);
+}
+  theShire.appendChild(hobbitsList);
 };
 
 function keepItSecretKeepItSafe() {
   // create an empty div with an id of 'the-ring' and innerHTML of "The ring"
   // add the ring as a child of Frodo
+  console.log("Keep it Secret and Safe!");
+  let theRing = document.createElement('div');
+  theRing.innerHTML = "The Ring";
+  theRing.setAttribute('id', 'the-ring');
+
+  theRing.appendChild(frodo);
 };
 
 function makeBaddies() {
