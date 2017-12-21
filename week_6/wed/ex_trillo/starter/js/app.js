@@ -1,6 +1,7 @@
 window.onload = function () {
     const removeButtons = document.querySelectorAll('.delete');
     const finishButtons = document.querySelectorAll('.finish');
+    const addCardButton = document.querySelector()
 
     for(let i = 0; i < removeButtons.length; i++) {
     addRemoveListener(removeButtons[i]);
@@ -16,6 +17,7 @@ window.onload = function () {
         });
     }
 
+
     function addFinishListener(node) {
         node.addEventListener('click', function() {
             const parentNode = this.parentNode;
@@ -28,4 +30,6 @@ window.onload = function () {
         });
     }
 
+
+    
 };
