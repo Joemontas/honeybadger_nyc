@@ -1,5 +1,6 @@
 $(function() {
     var $resultsContainer = $('#results-container');
+<<<<<<< HEAD
     $resultsContainer.on('click', '.movie', function() {
         
     })
@@ -11,6 +12,20 @@ $(function() {
                 s: title,
                 apikey: '5887c375'
             }
+=======
+
+    $resultsContainer.on('click', '.movie', function() {
+        const imdbID = $(this).data('id');
+        getMovieData({ i: imdbID, apikey: '9c1996d3' }).then(function (data) {
+            console.log(data);
+        })
+    })
+
+    function getMovieData(options) {
+        const result = $.ajax({
+            url: 'http://www.omdbapi.com/',
+            data: options
+>>>>>>> 300e9d8f0b5dcdf6da11a602fe42c59b3399f7e0
         })
 
         return result;
@@ -48,6 +63,7 @@ $(function() {
         })
     }
 
+<<<<<<< HEAD
     getMovieData('Batman')
         .then(normalizedMovies)
         .then(renderMovies)
@@ -158,3 +174,9 @@ $(function() {
 //         .then(renderWeatherData)
 //     ;
 // })
+=======
+    getMovieData({ s: 'Batman', apikey: '9c1996d3' })
+        .then(normalizedMovies)
+        .then(renderMovies)
+});
+>>>>>>> 300e9d8f0b5dcdf6da11a602fe42c59b3399f7e0
