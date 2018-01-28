@@ -13,6 +13,11 @@
   },
   "dependencies": {
     "express": "^4.16.2",
+<<<<<<< HEAD
     "request": "^2.83.0"
+=======
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+>>>>>>> 90f7f045c68cef876de445e2df86d2b426b35d2d
   }
 }
