@@ -14,10 +14,17 @@
   "dependencies": {
     "express": "^4.16.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "request": "^2.83.0"
 =======
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
 >>>>>>> 90f7f045c68cef876de445e2df86d2b426b35d2d
+=======
+    "express-handlebars": "^3.0.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "serve-favicon": "^2.4.5"
+>>>>>>> 8dac54be04ec0ca2db19633f64ae7f8d57efd347
   }
 }
