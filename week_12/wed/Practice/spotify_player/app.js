@@ -107,16 +107,15 @@ const express = require('express');
 const logger = require('morgan');
 const request = require('request-promise');
 const exphbs  = require('express-handlebars');
-// const favicon = require('serve-favicon');
-// const path = require('path');
+const favicon = require('serve-favicon');
+const path = require('path');
 const { clientId, clientSecret }= require('./api_key');
 const app = express();
 
 app.use(logger('dev'));
 app.engine('handlebars', exphbs({defaultLayout: 'index'}));
 app.set('view engine', 'handlebars');
-app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
@@ -154,7 +153,7 @@ function getArtistByName(access_token, artist) {
 
     return request(options).then(function(artistData) {
         return artistData;
-    })
+    });
 }
 
 function getTopTracks(access_token, id) {
@@ -168,24 +167,18 @@ function getTopTracks(access_token, id) {
 function normalizeTrackData(track) {
     const {
         album: {
-            name: albumName,
-            images: [{
-                url: albumArtUrl
-            }]
+            name: albumName
         },
         name: trackName,
         artists: [{
             name: artistName
-        }],
-        is: trackId
-
+        }]
     } = track;
+
     return {
         albumName,
         trackName,
-        artistName,
-        albumArtUrl,
-        trackId
+        artistName
     }
 }
 
@@ -214,13 +207,8 @@ app.get('/:artist', function(req, res) {
                 tracks: normalizedTracks
             }
 
-            res.render('artist', result);
+            res.render('artists', result);
         })
-});
-
-app.get('/track/:id', function(req, res) {
-    const id = req.params.id;
-    console.log(id);
 });
 
 app.listen(3000, function() {
