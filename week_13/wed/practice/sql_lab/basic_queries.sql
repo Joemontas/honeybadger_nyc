@@ -17,9 +17,10 @@ SELECT * FROM books WHERE publication_date > '1989';
 SELECT title FROM books;
 -- Get just the year that 'A Dance with Dragons' was published
   -- Cry when you realize how long it's been
+SELECT publication_date FROM books WHERE title = 'A Dance with Dragons';
 
 -- Get all books which have `the` somewhere in their title (hint, look up LIKE/ILIKE)
-
+SELECT * title FROM books WHERE title = 'A Dance with Dragons';
 -- Add yourself as an author
 
 -- Add two books that you'd like to write (you can hard-code your id as the author id)
