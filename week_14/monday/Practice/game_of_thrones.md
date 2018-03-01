@@ -92,9 +92,3 @@ As a user, I want to be able to view all houses, so that I can have a quick over
 As a user, I want to be able to view a single house and all its members, so that I can have a quick breakdown of the current citizens of Westerosian Houses
 
 As a user, I want to be able to view a single human and their weapons, so that I can keep track of how dangerous certain citizens are.
-
-/houses
-/:id
-/users
-/:id
-/houses/:id
