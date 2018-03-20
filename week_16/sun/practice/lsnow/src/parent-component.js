@@ -31,10 +31,13 @@ class ParentComponent extends Component {
  }
 
     render() {
+        console.log('RENDER');
+
         return (
             <div>
-                <SubComponent />
+                <SubComponent
                     imageSrc={this.state.imageSrc}
+                />
             </div>
         )
     }
