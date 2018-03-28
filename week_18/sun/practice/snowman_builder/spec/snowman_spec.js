@@ -1,12 +1,17 @@
 let Snowman = require('../snowman');
 
 describe('Snowman', () => {
-    let snowm;
+    let snowman;
+    let name;
 
     beforeEach(() => {
-        snowman = new Snowman();
+        name = 'Olaf';
+        snowman = new Snowman(name);
     });
 
+    it('has a defined name', function () {
+        expect
+    })
     describe("#name", function() {
         it("name every snowman", function() {
     });
@@ -20,6 +25,11 @@ describe('Snowman', () => {
     });
 
     describe("#likeWarmHugs()", () => {
+        describe('when snowmans name is Olaf', () => {
+            it('returns true', () => {
+                const result = snowman.likeWarmHugs();
+        });
+
         it('returns true wjen snowman name is Olaf' () => {
             const result = snowman.likesWarmHugs();
             expect(result).toBe(true);
