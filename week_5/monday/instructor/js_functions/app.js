@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-console.log('loaded')
-=======
 const func = function () {
     console.log('something');
 }
@@ -107,4 +104,3 @@ function doSomethingNtimes(cb, num) {
 function callBackWithArg(cb, arg) {
     return cb(arg);
 }
->>>>>>> 55dcbbb63d18f9cbeec3dedbbe26b34a1b6a4d05
