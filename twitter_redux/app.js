@@ -8,7 +8,7 @@ const passport = require('passport');
 require('./strategies/passport-local')(passport);
 
 const tweets = require('./routes/tweets');
-const user = require('./routes/users')(passport);
+const users = require('./routes/users')(passport);
 
 const app = express();
 

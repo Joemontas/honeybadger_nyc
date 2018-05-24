@@ -5,19 +5,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as userActionsw from '../../actions/user-actions';
 
+class CredentialsForm = props => {
+    const { handleSubmit, formHandler } = props;
+
+    )
+}
 class Signup extends Component {
-    handleSubmit(e) {
-        e.preventDefault();
-        const formBody = new FormData(e.target);
-
-
+    formHandler(values) {
+        this.props.userActions.createUser(values);
     }
+    
 
     render() {
         return (
             <div>
                 <CredentialForms 
-                    handler={this.handleSubmit.bind(this)}
+                    hformHandler={this.handleSubmit.bind(this)}
                 />
             </div>
         )
